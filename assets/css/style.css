@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Tektur&family=Work+Sans:wght@400;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Tektur", sans-serif;
+  height: 100vh;
+  color: #333;
+  background-image: linear-gradient(to top left, #42a5f5 0%, #5e35b1 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.game-screen {
+  position: relative;
+  width: 1040px;
+  height: 624px;
+  background-color: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 50px 80px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+}
+
+.player {
+  flex: 50%;
+  padding: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.75s;
+}
+.player .crown {
+  color: #1a237e;
+  font-size: 50px;
+  display: none;
+}
+
+.name {
+  font-size: 40px;
+  font-weight: 300;
+}
+.name .hand {
+  display: none;
+}
+
+.score {
+  font-size: 80px;
+  font-weight: 300;
+  color: #1a237e;
+}
+
+.player--active {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.player--active .hand {
+  display: inline-block;
+}
+.player--active .name {
+  font-weight: 700;
+}
+.player--active .score {
+  font-weight: 400;
+}
+.player--active .current {
+  font-weight: 600;
+}
+
+.current {
+  background-color: #1a237e;
+  opacity: 0.8;
+  border-radius: 5px;
+  color: #fff;
+  width: 200px;
+  height: 120px;
+  padding: 20px;
+  text-align: center;
+  transition: all 0.75s;
+  margin-top: 150px;
+}
+
+.current-label {
+  font-size: 25px;
+  color: #ddd;
+}
+
+.current-score {
+  font-size: 45px;
+}
+
+.btn {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #444;
+  border: none;
+  font-family: inherit;
+  font-size: 20px;
+  font-weight: 400;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px 25px;
+  border-radius: 10px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+.btn:active {
+  transform: translate(-50%, 3px);
+}
+
+.btn--new {
+  top: 40px;
+}
+
+.btn--roll {
+  top: 410px;
+}
+
+.btn--hold {
+  top: 470px;
+}
+
+.dice {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 150px;
+  height: 120px;
+  box-shadow: 0 20px 80px rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+}
+
+.player--winner {
+  background-color: #ff4081;
+}
+.player--winner .crown {
+  display: block;
+}
+.player--winner .name {
+  font-weight: 700;
+  color: #fff;
+}
+
+.hidden {
+  display: none;
+}/*# sourceMappingURL=style.css.map */
